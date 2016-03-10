@@ -30,7 +30,7 @@ save the changes and close the file:
 
 apply changes:
 
-    ifdown -a && ifup -a
+    sudo ifdown -a && sudo ifup -a
 
 ##Remove udev rules
 
