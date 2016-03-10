@@ -8,21 +8,33 @@ remove network-manager package:
 
 ##Configure a network connections using a native way
 
+check the interfaces names:
+
+    ifconfig -a
+
 open the interfaces file:
 
     sudo nano /etc/network/interfaces
 
-add lines:
+if you're going to use a wired connection, add lines:
 
     auto eth0
     allow-hotplug eth0
     iface eth0 inet dhcp
 
+- eth0 is a name of the interface, change it if needed
+
+if you're going to use a wi-fi connection, add lines:
+
     auto wlan0
     allow-hotplug wlan0
     iface wlan0 inet dhcp
-        wireless-essid <ESSID>
-        wireless-key <mysecretpassphrase>
+        wireless-essid ESSID
+        wireless-key mysecretpassphrase
+
+- ESSID is a wi-fi access point name
+- mysecretpassphrase is a wi-fi pasword
+- wlan0 is a name of the interface, change it if needed
 
 save the changes and close the file:
 
