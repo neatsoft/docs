@@ -6,6 +6,8 @@ remove network-manager package:
 
     sudo apt-get purge network-manager
 
+reboot
+
 ##Configure a network connections using a native way
 
 check the interfaces names:
@@ -42,7 +44,7 @@ save the changes and close the file:
 
 apply changes:
 
-    sudo ifdown -a && sudo ifup -a
+    sudo service networking restart
 
 ##Remove udev rules
 
